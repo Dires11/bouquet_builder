@@ -1,6 +1,6 @@
 ## Flower Bouquet Builder
 
-This project allows users to build online bouqets it offers both top down and side views. Currently the flower selection is limited only to roses but more flowers can be added by simply including the flower assets.
+This project allows users to build online bouquets it offers both top down and side views. Currently the flower selection is limited only to roses but more flowers can be added by simply including the flower assets.
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
