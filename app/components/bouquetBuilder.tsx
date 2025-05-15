@@ -1,11 +1,10 @@
-import Image from "next/image";
 import { useCallback, useState } from "react";
 import BouquetCalculator from "../lib/bouquetCalculator";
 import { FlowerSource } from "@/app/lib/flowerSrc";
 import Counter from "./bouquet-screen/counter";
 import SelectedFlower from "./bouquet-screen/selectedFlower";
 import FlowerShop from "./bouquet-screen/flowerShop";
-import { useFlowerBuilderStore, useOptionsScreenStore } from "../lib/store";
+import { useFlowerBuilderStore } from "../lib/store";
 import ShowSideBouquet from "./bouquet-screen/showSideBouquet";
 import ShowTopDownBouquet from "./bouquet-screen/showTopDownBouquet";
 
@@ -51,7 +50,8 @@ export default function BouquetBuilder() {
     >
       <div className="flex flex-4 flex-col gap-3">
         <h1 className="lg:text-title-lg/30 md:text-title-md/30 text-title/30 font-bold">
-          Your <br /> Bouquet
+          Your
+          <br /> Bouquet
         </h1>
         <div className="flex h-1/5 flex-row items-center gap-3">
           <SelectedFlower className="h-3/4 flex-5" />
