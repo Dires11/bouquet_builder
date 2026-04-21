@@ -4,6 +4,8 @@ Bouquet Builder is an interactive web app for designing a flower bouquet in real
 
 This project is a good snapshot of product thinking plus frontend implementation: it combines a simple shopping-style interaction model with custom placement logic that keeps the bouquet visually organized as flowers are added.
 
+Live link: [bouquet-builder-plum.vercel.app](https://bouquet-builder-plum.vercel.app/)
+
 ![Bouquet Builder screenshot](public/readme/main.png)
 
 ## What This Project Does
@@ -52,9 +54,3 @@ npm run dev
 ```
 
 Then open [http://localhost:3000](http://localhost:3000).
-
-## Resume-Friendly Summary
-
-If someone is scanning this repository quickly, the shortest description is:
-
-> Built an interactive bouquet customization app with Next.js, React, TypeScript, and Zustand, including a custom layout engine that renders bouquets in synchronized top-down and side views.
