@@ -1,4 +1,4 @@
-import { useCallback, useState } from "react";
+import { useCallback } from "react";
 import BouquetCalculator from "../lib/bouquetCalculator";
 import { FlowerSource } from "@/app/lib/flowerSrc";
 import Counter from "./bouquet-screen/counter";
@@ -45,33 +45,33 @@ export default function BouquetBuilder() {
 
   return (
     <div
-      className="mx-auto flex h-screen w-screen gap-3 bg-neutral-200 px-5 py-1 md:w-7/8 lg:w-7/8"
+      className="mx-auto grid min-h-screen w-full max-w-7xl grid-cols-1 gap-4 bg-neutral-200 px-3 py-3 sm:px-4 md:px-6 lg:grid-cols-[minmax(24rem,32rem)_minmax(0,1fr)] lg:gap-6 lg:py-5"
       id="BouquetBuilder"
     >
-      <div className="flex flex-4 flex-col gap-3">
-        <h1 className="lg:text-title-lg/30 md:text-title-md/30 text-title/30 font-bold">
+      <div className="flex min-w-0 flex-col gap-4 lg:gap-5">
+        <h1 className="max-w-[8ch] text-5xl leading-[0.88] font-bold sm:text-6xl md:text-7xl xl:text-[6.5rem]">
           Your
           <br /> Bouquet
         </h1>
-        <div className="flex h-1/5 flex-row items-center gap-3">
-          <SelectedFlower className="h-3/4 flex-5" />
+        <div className="grid grid-cols-1 gap-3 sm:grid-cols-[minmax(15rem,1.2fr)_minmax(14rem,1fr)] sm:items-stretch">
+          <SelectedFlower className="flex-1" />
           <Counter
-            className="h-3/4 flex-6"
+            className="min-w-0"
             handleAdd={() => handleFlowerUpdate(true, curFlower)}
             handleRemove={() => handleFlowerUpdate(false, curFlower)}
             count={flowerCount}
           />
         </div>
-        <FlowerShop />
+        <FlowerShop className="flex-1" />
       </div>
-      <div className="bg-card my-2 flex flex-3 flex-col gap-3 rounded-2xl">
+      <div className="bg-card flex min-h-[32rem] min-w-0 flex-col gap-3 rounded-[2rem] p-3 sm:min-h-[36rem] sm:p-4 lg:min-h-[calc(100vh-3rem)]">
         <ShowSideBouquet
           height={roseMeasurements.sideSize.height}
-          className="flex-1"
+          className="min-h-[16rem] flex-1 overflow-hidden rounded-[1.75rem] bg-white/25"
         />
         <ShowTopDownBouquet
           size={roseMeasurements.topDownSize}
-          className="flex-1"
+          className="min-h-[16rem] flex-1 overflow-hidden rounded-[1.75rem] bg-white/25"
         />
       </div>
     </div>

@@ -29,7 +29,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${lilitaOne.variable} antialiased`}>
+    <html
+      lang="en"
+      className={`${geistSans.variable} ${geistMono.variable} ${lilitaOne.variable} antialiased`}
+    >
       <body>{children}</body>
     </html>
   );

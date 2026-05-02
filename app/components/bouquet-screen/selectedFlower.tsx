@@ -11,11 +11,13 @@ export default function SelectedFlower({ className }: SelectedFlowerProps) {
   );
   return (
     <div
-      className={`bg-card flex items-center gap-5 rounded-2xl p-3 ${className}`}
+      className={`bg-card flex min-h-24 min-w-0 items-center justify-between gap-2 overflow-hidden rounded-[1.75rem] px-4 py-4 sm:px-5 ${className}`}
     >
-      <p className="text-4xl">Selected: </p>
+      <p className="min-w-0 shrink text-2xl leading-none sm:text-[2rem]">
+        Selected:
+      </p>
       <Image
-        className="size-3/4"
+        className="h-12 w-12 shrink-0 sm:h-14 sm:w-14 lg:h-16 lg:w-16"
         src={selectedFlower.topDown}
         alt="selected flower"
         width={100}
